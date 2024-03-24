@@ -1,0 +1,18 @@
+body {
+  min-height: 100vh;
+  background: #f6f6f6;
+}
+
+.home canvas {
+  cursor: move;
+}
+
+.inner-container {
+  padding: 6px;
+  &.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+}
