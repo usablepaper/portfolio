@@ -22,9 +22,9 @@
     margin-top: 10px;
     .category-label {
       padding: 2px 5px;
-      background-color: #fff;
+      background-color: $white;
       font-size: 0.75rem;
-      color: #000;
+      color: $black;
       &.scss {
         background-color: #ca6899;
       }
@@ -58,7 +58,7 @@
       height: auto;
       padding: 20px;
       aspect-ratio: 1;
-      background-color: #000;
+      background-color: $black;
       object-fit: contain;
       object-position: center;
       &:first-child {
@@ -72,8 +72,8 @@
       position: sticky;
       top: 33px;
       padding: 15px;
-      background-color: #000;
-      color: #fff;
+      background-color: $black;
+      color: $white;
     }
     .contents {
       margin-top: 16px;
@@ -100,16 +100,16 @@
       gap: 10px;
       display: grid;
       grid-template-columns: 0.4fr 1fr;
-      border-bottom: gray 1px solid;
+      border-bottom: $gray 1px solid;
       padding-top: 10px;
       padding-bottom: 10px;
       &:first-of-type {
-        border-top: gray 1px solid;
+        border-top: $gray 1px solid;
       }
       strong {
         display: block;
         word-break: keep-all;
-        border-right: 1px solid gray;
+        border-right: 1px solid $gray;
         padding-right: 10px;
         margin-right: 10px;
       }
@@ -143,8 +143,8 @@
       grid-column: 1 / 13;
       margin-bottom: -6px;
       padding: 24px 15px 8px;
-      background-color: #000;
-      color: #fff;
+      background-color: $black;
+      color: $white;
       .title-year {
         flex-direction: column;
         align-items: center;
@@ -190,7 +190,7 @@
         strong {
           border-right: 0;
           font-weight: 600;
-          color: #a6a6a6;
+          color: $lightgray;
         }
       }
     }

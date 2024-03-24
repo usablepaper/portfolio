@@ -192,8 +192,8 @@ header .nav {
   gap: 6px;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
-  color: white;
-  background-color: black;
+  color: #fff;
+  background-color: #000;
   justify-content: space-between;
 }
 header .nav .trigger {
@@ -204,7 +204,7 @@ header .nav .trigger span {
   display: inline-block;
 }
 header .nav .trigger span:hover {
-  color: gray;
+  color: #808080;
   cursor: pointer;
 }
 header .nav .trigger .popup {
@@ -212,7 +212,7 @@ header .nav .trigger .popup {
   position: absolute;
   top: calc(100% + 6px);
   left: 0;
-  background-color: black;
+  background-color: #000;
   padding: 12px 15px;
   line-height: 1.4;
   font-size: 14px;
@@ -220,7 +220,7 @@ header .nav .trigger .popup {
 header .nav .trigger .popup strong {
   margin-top: 10px;
   display: block;
-  border-top: 1px solid rgb(70, 70, 70);
+  border-top: 1px solid #808080;
   padding-top: 6px;
 }
 header .nav .trigger .popup li {
@@ -244,7 +244,7 @@ header .nav .trigger .popup__exit {
 header .nav .trigger .popup .contacts {
   margin-top: 10px;
   padding-top: 6px;
-  border-top: 1px solid rgb(70, 70, 70);
+  border-top: 1px solid #808080;
 }
 header .nav .trigger .popup .contacts li {
   grid-template-columns: 70px 1fr;
@@ -270,10 +270,10 @@ header .nav .trigger--cv .popup li {
   display: block;
   margin-bottom: 4px;
   padding-bottom: 4px;
-  border-bottom: 1px solid rgb(70, 70, 70);
+  border-bottom: 1px solid #808080;
 }
 header .nav .trigger--cv .popup li .year {
-  color: gray;
+  color: #808080;
 }
 header .nav .trigger--cv .popup li:last-of-type {
   border-bottom: 0;
@@ -331,7 +331,7 @@ header:is(.home header) {
   left: 20px;
   width: 50px;
   z-index: 9;
-  color: white;
+  color: #fff;
   mix-blend-mode: difference;
   display: none;
 }
@@ -395,7 +395,7 @@ body {
   height: 100%;
   object-fit: contain;
   padding: 20px;
-  background-color: black;
+  background-color: #000;
   aspect-ratio: 1;
 }
 .works-container a .category-wrapper {
@@ -567,17 +567,17 @@ body {
   gap: 10px;
   display: grid;
   grid-template-columns: 0.4fr 1fr;
-  border-bottom: gray 1px solid;
+  border-bottom: #808080 1px solid;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 .single .contents li:first-of-type {
-  border-top: gray 1px solid;
+  border-top: #808080 1px solid;
 }
 .single .contents li strong {
   display: block;
   word-break: keep-all;
-  border-right: 1px solid gray;
+  border-right: 1px solid #808080;
   padding-right: 10px;
   margin-right: 10px;
 }
