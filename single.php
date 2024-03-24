@@ -1,5 +1,26 @@
 <?php get_header(); ?>
 <div class="contents-container">
+    <div class="information">
+        <div class="sticky">
+                <?php 
+                    $categories = get_the_category();
+                    $category_output = '';
+                    if ( ! empty( $categories ) ) {
+                        foreach ( $categories as $category ) {
+                            $category_output .= '<span class="category-label '.$category->slug.'">' . esc_html( $category->name ) . '</span>';
+                        }
+                    }
+                    $title = get_the_title();
+                    $year = get_field('year');
+                    ?>
+                <div class="title-year">
+                    <h2 class="title"><?= $title ?></h2>
+                    <span class="year"><?= $year ?></span>
+
+                </div>
+                <div class="category-wrapper"><?= $category_output ?></div>
+        </div>
+    </div>
     <div class="gallery">
         <?php 
             if ( has_post_thumbnail() ) {
