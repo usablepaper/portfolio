@@ -33,7 +33,7 @@ import {
 
 const mainType = Math.floor(Math.random() * 2);
 
-mainType ? a_type() : b_type();
+0 ? a_type() : b_type();
 
 function a_type() {
     const scene = new THREE.Scene();
