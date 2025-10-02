@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="grid">
+        <main className="grid grid-cols-4 gap-3 min-h-dvh p-3 mt-13">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/posts/:slug" element={<PostDetail />} />

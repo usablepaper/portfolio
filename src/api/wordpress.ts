@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { WordPressPost, WordPressMedia, Post } from '../types/wordpress';
+import type { WordPressPost, WordPressMedia, Post } from '../types';
 
 const WORDPRESS_BASE_URL = import.meta.env.VITE_WORDPRESS_API_URL;
 

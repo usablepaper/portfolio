@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import type { Post } from '../types/wordpress';
-import { usePostStore } from '../store/posts';
+import type { Post } from '../types';
+import { usePostStore } from '../store';
 
 interface Props {
   post: Post;
@@ -9,19 +9,15 @@ interface Props {
 export default function PostCard({ post }: Props) {
   const { setCurrentPost } = usePostStore();
   return (
-    <div className="overflow-hidden">
+    <Link
+      className="overflow-hidden h-fit"
+      to={`/posts/${post.slug}`}
+      onClick={() => setCurrentPost(post)}
+    >
       {post.featured_image && (
-        <div className="aspect-video overflow-hidden">
-          <img
-            src={post.featured_image}
-            alt={post.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <img src={post.featured_image} alt={post.title} />
       )}
-      <Link to={`/posts/${post.slug}`} onClick={() => setCurrentPost(post)}>
-        <h3>{post.title}</h3>
-      </Link>
-    </div>
+      <h3>{post.title}</h3>
+    </Link>
   );
 }

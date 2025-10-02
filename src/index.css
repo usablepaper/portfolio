@@ -1,3 +1,79 @@
+@import "tailwindcss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@theme {
+    /* Break Point */
+    --breakpoint-*: initial;
+    --breakpoint-pc: 75rem;
+
+    --font-fallback: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+    --font-sans: "Pretendard", var(--font-fallback);
+
+    /* Text Size */
+    --text-xs: 0.625rem;
+    --text-xs--line-height: 0.875rem;
+    --text-sm: 0.75rem;
+    --text-sm--line-height: 1rem;
+    --text-md: 0.875rem;
+    --text-md--line-height: 1.125rem;
+    --text-base: 1rem;
+    --text-base--line-height: 1.25rem;
+    --text-lg: 1.25rem;
+    --text-lg--line-height: 1.5rem;
+    --text-xl: 1.5rem;
+    --text-xl--line-height: 1.75rem;
+    --text-2xl: 1.75rem;
+    --text-2xl--line-height: 2.1875rem;
+
+    /* Grey Color */
+    --color-grey-50: #F7F7F7;
+    --color-grey-100: #F5F5F5;
+    --color-grey-200: #E5E5E5;
+    --color-grey-300: #D1D1D1;
+    --color-grey-400: #B6B6B6;
+    --color-grey-500: #959595;
+    --color-grey-600: #767676;
+    --color-grey-700: #595959;
+    --color-grey-800: #191919;
+}
+
+/* Base Styles (for default HTML Elements) */
+@layer base {
+    html {}
+
+    body {
+        margin: 0;
+    }
+
+    select,
+    input {
+        @apply appearance-none outline-none;
+    }
+
+    ul, ol, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+/* Components Styles (for certain UI) */
+@layer components {
+}
+
+@utility center {
+    @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+/* Apply width based on grid system */
+@utility w-col-span-* {
+    width: calc(100vw / 14 * --value(integer));
+}

@@ -19,11 +19,16 @@ export default function PostDetail() {
         <Loading />
       ) : (
         <>
-          <Link to="/posts">← Back</Link>
+          <Link
+            to="/"
+            className="fixed top-0 h-13 flex items-center uppercase z-60"
+          >
+            ← Back
+          </Link>
           {currentPost ? (
-            <article>
+            <article className="col-span-4 grid grid-cols-4">
               {currentPost.featured_image && (
-                <div className="mb-8">
+                <div className="col-span-2 row-start-1 row-end-3">
                   <img
                     src={currentPost.featured_image}
                     alt={currentPost.title}
@@ -32,7 +37,7 @@ export default function PostDetail() {
                 </div>
               )}
 
-              <header className="mb-8">
+              <header className="col-span-2">
                 <h1 className="text-4xl font-bold text-gray-900 mb-4">
                   {currentPost.title}
                 </h1>
@@ -45,10 +50,13 @@ export default function PostDetail() {
                 </time>
               </header>
 
-              <div dangerouslySetInnerHTML={{ __html: currentPost.content }} />
+              <div
+                className="col-span-2 col-start-3"
+                dangerouslySetInnerHTML={{ __html: currentPost.content }}
+              />
             </article>
           ) : (
-            <p className="text-gray-600 mb-4">Post not found</p>
+            <p>Post not found</p>
           )}
         </>
       )}
